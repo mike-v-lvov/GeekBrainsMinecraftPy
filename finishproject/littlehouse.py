@@ -44,23 +44,13 @@ def tree(x, y, z, trunk, crown):
 
 
 def house(x, y, z):
-    # x, y, z = mc.player.getTilePos()
     time.sleep(2)
-    # fence(x, y, z) # забор нужно делать ДО дома, чтобы воздухом не уничтожить нижний слой дома
     hipped_roof(x + 3, y + 10, z + 3, 5, 5)
     base(x, y, z, 6, 1)
-    door(x, y, z, 0) # TODO узнать айди двери
+    door(x, y, z, 0)
     window(x, y, z, 0)
     tree(x - 5, y, z - 5, 17, 18)
-    #flower_bed(x, y, z)  # // TODO в вызов функции нужно предавать еще два аргумента, flower и bed. Какие значения?
     file = open("log.txt", "a")
     file.write("a house has been build at position "+ '\n' + str(x) + '\n' + str(y) + "\n" + str(z) + "\n" + "\n")
     file.close()
-
-
-#x, y, z = mc.player.getTilePos()
-
-
-#mc.setBlocks(x - 10 , y - 10, z - 10, x + 10, y + 10, z + 10, 0)
-
 

@@ -1,6 +1,5 @@
 from mcpi.minecraft import Minecraft
 
-import time
 from littlehouse import house
 
 mc = Minecraft.create()
